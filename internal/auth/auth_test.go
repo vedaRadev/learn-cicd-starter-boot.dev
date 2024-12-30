@@ -24,7 +24,7 @@ func TestGetAPIKey(t *testing.T) {
 	}
 
 	headers = http.Header{}
-	result, err = GetAPIKey(headers)
+	_, err = GetAPIKey(headers)
 	if err == nil {
 		t.Error("did not error but should have")
 		return
@@ -36,7 +36,7 @@ func TestGetAPIKey(t *testing.T) {
 
 	headers = http.Header{}
 	headers.Add("Authorization", "Bearer test")
-	result, err = GetAPIKey(headers)
+	_, err = GetAPIKey(headers)
 	if err == nil {
 		t.Error("did not error but should have")
 		return
