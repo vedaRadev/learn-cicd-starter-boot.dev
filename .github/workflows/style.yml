@@ -1,11 +1,11 @@
-name: style
+name: Style
 
 on:
   pull_request:
     branches: [main]
 
 jobs:
-  style:
+  Style:
     name: Style
     runs-on: ubuntu-latest
 
